@@ -33,6 +33,7 @@ def generate_csv_file(users):
             csv_writer = csv.writer(file)
             row_data = list(user.values()) + [''] * 9
             csv_writer.writerow(row_data)
+            print(f'Adicionado usuário ao arquivo CSV: {user['exibithion_name']}')
 
 
 def extract_excel_data(spreadsheet_name):
@@ -65,5 +66,4 @@ def extract_excel_data(spreadsheet_name):
 
 extract_excel_data(spreadsheet)
 generate_csv_file(all_users)
-
 excel_file.close()
